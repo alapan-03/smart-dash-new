@@ -1,7 +1,0 @@
-{
-  "name": "hello",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}

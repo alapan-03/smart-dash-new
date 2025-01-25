@@ -1,0 +1,88 @@
+/* Navbar Container */
+.navbar-header {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-transparent {
+    background-color: transparent;
+  }
+  
+  .navbar-white {
+    background-color: white;
+  }
+  
+  /* Inner container */
+  .navbar-container {
+    max-width: 100%;
+    /* margin-top: -15px; */
+    margin-left: 0px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f98a1b;
+    cursor: pointer;
+  }
+  
+  /* Navigation Menu */
+  .navbar-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-link {
+    color: #4a4a4a;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: #d3d3d3;
+  }
+  
+  /* Actions (Sign In, Logout, Register) */
+  .navbar-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .navbar-signin,
+  .navbar-logout,
+  .navbar-register {
+    color: #f98a1b;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .navbar-signin:hover,
+  .navbar-logout:hover {
+    color: #ff7043;
+  }
+  
+  .navbar-register {
+    background-color: #f98a1b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  
+  .navbar-register:hover {
+    background-color: #ff7043;
+  }
+  

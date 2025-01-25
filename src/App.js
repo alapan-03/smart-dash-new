@@ -18,6 +18,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Main from "./Components/HomePage/Main";
 import RoadmapHome from "./Components/Roadmap/RoadmapHome";
 import Leaderboard from "./Components/Leaderboard";
+import './index.css';
+import Home from "./Components/LandingPage/Home";
 
 const context = createContext();
 const context2 = createContext();
@@ -83,7 +85,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/signup" element={<Home />} />
+        <Route path="/signin" element={<Home />} /> */}
+        <Route path="/dashboard" element={<Main />} />
         <Route path="/class/:classId" element={<RoadmapHome />} />
         <Route path="/viewPdf/:fileUrl" element={<TrackInteractionsCont />} />
         {timeData.timeSpent && timeData.totalWatchTime ? (
@@ -93,8 +98,6 @@ function App() {
           <Route path="/leader" element={<p>Leaderboard data is not available yet</p>} />
         )}      </Routes>
       {/* <Main/> */}
-
-      <p className="text-3xl font-bold underline">Hello world!</p>
     </Router>
   );
 }
