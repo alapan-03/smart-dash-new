@@ -1,0 +1,93 @@
+/* About Us Section */
+.about-us-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -8px;
+    background-color: #ffffff;
+  }
+  
+  /* Overlay for dark effect */
+  .about-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(177, 177, 177, 0.7); /* Adjust opacity for desired darkness */
+    z-index: 1;
+  }
+  
+  /* Content within About Us Section */
+  .about-us-content {
+    position: relative; /* Ensures content is above the overlay */
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 24px;
+    max-width: 800px;
+  }
+  
+  /* Heading */
+  .about-us-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  /* Description */
+  .about-us-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    color: #e2e8f0;
+  }
+  
+  /* Typed.js Text */
+  .about-us-typed {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #a0aec0;
+  }
+  
+  /* Buttons */
+  .about-us-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .learn-more-button {
+    background-color: #2563eb; /* Blue button */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .contact-us-button {
+    background-color: #e5e7eb; /* Gray button */
+    color: #374151;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-us-button:hover {
+    background-color: #d1d5db;
+  }
+  

@@ -14,10 +14,19 @@ import CreateClass from "./Components/HomePage/CreateClass";
 import LearningRoadmap from "./Components/Roadmap/subComp/LearningRoadmap";
 import App2 from "./Components/Roadmap/RoadmapHome";
 import Appan2 from "./Components/Roadmap/RoadmapHome";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./Components/HomePage/Main";
 import RoadmapHome from "./Components/Roadmap/RoadmapHome";
 import Leaderboard from "./Components/Leaderboard";
+import './index.css';
+import Home from "./Components/LandingPage/Home";
+import { Signal } from "lucide-react";
+import Signup from "./Components/AuthPages/Signup";
+import Signin from "./Components/AuthPages/Signin";
+import { Provider, useDispatch } from "react-redux";
+import store from "./Redux/store";
+// import store from "./Redux/store";
+
 
 const context = createContext();
 const context2 = createContext();
@@ -27,6 +36,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [timeData, setTimeData] = useState({})
   const [addClassState, setAddClassState] = useState(false);
+
+  // console.log("Store is :-> ", store);
+
+  // const dispatch = useDispatch();
+  // console.log("Dispatch is :-> ", dispatch);
 
   useEffect(() => {
     // Fetch the data when the component mounts
@@ -81,9 +95,13 @@ function App() {
   // console.log(context);
 
   return (
-    <Router>
+    <Provider store={store}>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/dashboard" element={<Main />} />
         <Route path="/class/:classId" element={<RoadmapHome />} />
         <Route path="/viewPdf/:fileUrl" element={<TrackInteractionsCont />} />
         {timeData.timeSpent && timeData.totalWatchTime ? (
@@ -93,9 +111,8 @@ function App() {
           <Route path="/leader" element={<p>Leaderboard data is not available yet</p>} />
         )}      </Routes>
       {/* <Main/> */}
-
-      <p className="text-3xl font-bold underline">Hello world!</p>
-    </Router>
+    </BrowserRouter>
+    </Provider>
   );
 }
 

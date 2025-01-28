@@ -5,6 +5,7 @@ import Body from './Body';
 import url from "./../../url";
 import { useEffect, useState, createContext } from "react";
 import CreateClass from './CreateClass';
+// import './index.css';
 
 // import Appan2 from './Components/Roadmap/Appan2';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
