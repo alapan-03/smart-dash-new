@@ -1,0 +1,129 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar-text {
+    color: white;
+    font-size: 18px;
+  }
+  
+  .navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Button Styling */
+  .join-classroom-btn,
+  .add-topic-btn {
+    display: flex;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .join-classroom-btn:hover,
+  .add-topic-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .join-classroom-btn svg,
+  .add-topic-btn svg {
+    margin-right: 8px;
+  }
+  
+  /* Popup Overlay */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Popup Content */
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .popup-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Input Field */
+  .popup-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Error Message */
+  .error-text {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Popup Buttons */
+  .popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .popup-btn-cancel,
+  .popup-btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .popup-btn-cancel {
+    background-color: #e0e0e0;
+    color: black;
+  }
+  
+  .popup-btn-cancel:hover {
+    background-color: #ccc;
+  }
+  
+  .popup-btn-submit {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .popup-btn-submit:hover {
+    background-color: #2980b9;
+  }
+  
+  .popup-btn-submit:disabled {
+    background-color: #b0c4de;
+    cursor: not-allowed;
+  }
+  
