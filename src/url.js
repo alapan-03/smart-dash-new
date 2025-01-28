@@ -1,2 +1,2 @@
-let url = "http://127.0.0.1:8080";
+let url = "http://localhost:8080";
 module.exports = {url};
