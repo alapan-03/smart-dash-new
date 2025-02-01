@@ -71,7 +71,7 @@ export default function Resource(props) {
   const handleDelete = async (resourceId, filename) => {
     console.log(filename)
     try {
-      const response = await axios.delete(`http://127.0.0.1:8080/api/v1/resource/deleteResource/${resourceId}/${filename}`);
+      const response = await axios.delete(`${url.url}/api/v1/resource/deleteResource/${resourceId}/${filename}`);
       if (response.status === 200) {
         alert("Resource deleted successfully.");
         // Optionally, you could refresh the list or update the state here to remove the item from the list

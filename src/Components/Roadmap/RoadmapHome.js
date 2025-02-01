@@ -8,6 +8,7 @@ import YouTubeForm from "./subComp/YoutubeForm";
 import Resource from "./subComp/Resource";
 import TrackVideoCont from "../VideoViewer/TrackVideoCont";
 import Quiz from "../Quiz";
+import { useSelector } from "react-redux";
 
 export default function RoadmapHome(props) {
 
@@ -16,6 +17,7 @@ export default function RoadmapHome(props) {
     const [resource, setAddResourceSt] = useState(false);
     const [link, setaddLink] = useState(false);
     const [videoUrl, setVideoUrl] = useState();
+
 
     function addTopic(e){
         setAddTopicState(e)
