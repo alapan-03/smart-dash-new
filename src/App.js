@@ -25,7 +25,8 @@ import Signup from "./Components/AuthPages/Signup";
 import Signin from "./Components/AuthPages/Signin";
 import { Provider, useDispatch } from "react-redux";
 import store from "./Redux/store";
-// import store from "./Redux/store";
+import SigninTeacher from "./Components/AuthPages/SigninTeacher";
+import RoleBasedComponent from "./Components/HomePage/RoleBasedComponent";
 
 
 const context = createContext();
@@ -101,9 +102,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/dashboard" element={<Main />} />
+        <Route path="/dashboard" element={<RoleBasedComponent />} />
         <Route path="/class/:classId" element={<RoadmapHome />} />
         <Route path="/viewPdf/:fileUrl" element={<TrackInteractionsCont />} />
+        <Route path="/teacherSignin" element={<SigninTeacher />} />
         {timeData.timeSpent && timeData.totalWatchTime ? (
           <Route path="/leader" element={<Leaderboard data={timeData} />} />
         ) : (
