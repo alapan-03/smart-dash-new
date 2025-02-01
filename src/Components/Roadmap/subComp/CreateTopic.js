@@ -4,6 +4,7 @@ import { useState } from "react";
 import DragDrop from "./FileUpload";
 import FileUpload from "./FileUpload";
 import { useParams } from "react-router";
+import { useSelector } from "react-redux";
 
 export default function CreateTopic(props) {
 
@@ -13,6 +14,8 @@ export default function CreateTopic(props) {
   const [loading, setLoading] = useState(true);
   const [topicName, setTopicName] = useState(""); // State for class name
   const [description, setDescription] = useState(""); 
+  const user = useSelector((state) => state.auth.user);
+  console.log(user);
   
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,7 +24,8 @@ export default function CreateTopic(props) {
         const classData = {
           topicName,
           classroomId: classId,
-          description
+          description,
+          teacherId: user.id
         };
     
         try {
